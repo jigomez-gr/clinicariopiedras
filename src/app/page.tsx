@@ -114,6 +114,21 @@ export default function Home() {
         };
     }, []);
 
+    // Force autoplay on component mount (resolves client-side navigation freeze)
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            video.play()
+                .then(() => {
+                    setVideoPlaying(true);
+                })
+                .catch((e) => {
+                    console.warn("Autoplay programmatic attempt blocked:", e);
+                    setVideoPlaying(false);
+                });
+        }
+    }, []);
+
     // Video Sync logic
     const handleTimeUpdate = () => {
         const video = videoRef.current;
