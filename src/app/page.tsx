@@ -117,16 +117,30 @@ export default function Home() {
     // Force autoplay on component mount (resolves client-side navigation freeze)
     useEffect(() => {
         const video = videoRef.current;
-        if (video) {
+        if (!video) return;
+
+        const attemptPlay = () => {
+            video.muted = true;
             video.play()
                 .then(() => {
                     setVideoPlaying(true);
                 })
                 .catch((e) => {
                     console.warn("Autoplay programmatic attempt blocked:", e);
-                    setVideoPlaying(false);
                 });
-        }
+        };
+
+        // Try playing immediately
+        attemptPlay();
+
+        // Register event-driven fallbacks to catch lazy-loading sources
+        video.addEventListener('loadedmetadata', attemptPlay);
+        video.addEventListener('canplay', attemptPlay);
+
+        return () => {
+            video.removeEventListener('loadedmetadata', attemptPlay);
+            video.removeEventListener('canplay', attemptPlay);
+        };
     }, []);
 
     // Video Sync logic
@@ -313,8 +327,8 @@ export default function Home() {
                         ref={videoRef}
                         className="hero-video"
                         id="heroVideo"
-                        src="videos/hero-clinica.mp4"
-                        poster="videos/hero-poster.jpg"
+                        src="/videos/hero-clinica.mp4"
+                        poster="/videos/hero-poster.jpg"
                         autoPlay
                         muted
                         loop
@@ -324,7 +338,7 @@ export default function Home() {
                     />
                     <audio
                         ref={audioRef}
-                        src="sonidos_mp3/Erik Satie - Gymnopédie No.1.mp3"
+                        src="/sonidos_mp3/Erik Satie - Gymnopédie No.1.mp3"
                         loop
                         preload="auto"
                     />
