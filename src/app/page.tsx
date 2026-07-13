@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 const MARKS = [0.0, 4.4, 8.8, 13.2, 17.6, 22.0, 26.4, 30.8]; // 8 escenas
 const CIERRE = 35.2; // cartón final
@@ -522,7 +523,7 @@ export default function Home() {
                                 <div className="price">
                                     Implante <b>desde 850 €</b>
                                 </div>
-                                <span className="more">Saber más →</span>
+                                <Link href="/especialidades/implantes-dentales" className="more">Saber más →</Link>
                             </div>
                         </article>
 
@@ -541,7 +542,7 @@ export default function Home() {
                                 <div className="price">
                                     Alineadores <b>desde 3.000 €</b>
                                 </div>
-                                <span className="more">Saber más →</span>
+                                <Link href="/especialidades/ortodoncia" className="more">Saber más →</Link>
                             </div>
                         </article>
 
@@ -560,7 +561,7 @@ export default function Home() {
                                 <div className="price">
                                     Blanqueamiento <b>desde 320 €</b>
                                 </div>
-                                <span className="more">Saber más →</span>
+                                <Link href="/especialidades/odontologia-estetica" className="more">Saber más →</Link>
                             </div>
                         </article>
 
@@ -579,7 +580,7 @@ export default function Home() {
                                 <div className="price">
                                     Corona zirconio <b>desde 420 €</b>
                                 </div>
-                                <span className="more">Saber más →</span>
+                                <Link href="/especialidades/protesis-dental" className="more">Saber más →</Link>
                             </div>
                         </article>
 
@@ -598,7 +599,7 @@ export default function Home() {
                                 <div className="price">
                                     Limpieza <b>desde 55 €</b>
                                 </div>
-                                <span className="more">Saber más →</span>
+                                <Link href="/especialidades/periodoncia" className="more">Saber más →</Link>
                             </div>
                         </article>
 
@@ -617,7 +618,7 @@ export default function Home() {
                                 <div className="price">
                                     Extracción <b>desde 80 €</b>
                                 </div>
-                                <span className="more">Saber más →</span>
+                                <Link href="/especialidades/cirugia-bucal" className="more">Saber más →</Link>
                             </div>
                         </article>
                     </div>
