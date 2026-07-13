@@ -686,6 +686,59 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* ===================== OPINIONES DE PACIENTES ===================== */}
+            <section className="reviews-sec" id="opiniones" style={{ padding: 'clamp(4rem, 8vw, 6.5rem) 0', borderTop: '1px solid var(--linea)', backgroundColor: '#FAF9F5' }}>
+                <div className="wrap">
+                    <div className="spec-head" style={{ marginBottom: '3rem' }}>
+                        <div>
+                            <span className="eyebrow" style={{ color: 'var(--rojo)' }}>Nuestros pacientes opinan</span>
+                            <h2 className="title">La confianza de quienes nos eligen</h2>
+                        </div>
+                        <p className="section-intro">
+                            La confianza y las recomendaciones de nuestros pacientes forman parte de la historia de Clínica Dental Río Piedras.
+                        </p>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.6rem' }}>
+                        <div style={{ background: '#fff', border: '1px solid var(--linea)', padding: '2rem 1.8rem', borderRadius: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem', boxShadow: 'var(--shadow-card)' }}>
+                            <p style={{ fontStyle: 'italic', fontSize: '0.92rem', color: 'var(--tinta)', lineHeight: '1.65', margin: 0 }}>
+                                “¡Excelente! En Clínica Dental Río Piedras está el mejor equipo de profesionales que puedas encontrar. Son amables, ofrecen una atención impecable y responden a todas tus preguntas con empatía y eficacia. Demuestran un nivel de calidad y compromiso muy alto. Estoy muy agradecido.”
+                            </p>
+                            <div style={{ borderTop: '1px solid var(--linea)', paddingTop: '0.8rem', fontWeight: 600, fontSize: '0.88rem', color: 'var(--azul-osc)' }}>
+                                Manuel Gómez Raya
+                            </div>
+                        </div>
+
+                        <div style={{ background: '#fff', border: '1px solid var(--linea)', padding: '2rem 1.8rem', borderRadius: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem', boxShadow: 'var(--shadow-card)' }}>
+                            <p style={{ fontStyle: 'italic', fontSize: '0.92rem', color: 'var(--tinta)', lineHeight: '1.65', margin: 0 }}>
+                                “Llegué a Clínica Dental Río Piedras por recomendación de un amigo y ahora soy yo quien la recomienda a todos los míos. Destacaría, sin dudarlo, el trato cercano, tranquilizador y profesional de todo el personal. Entrar en la clínica es tener la sensación de estar en buenas manos, con una atención cálida y muy personalizada.”
+                            </p>
+                            <div style={{ borderTop: '1px solid var(--linea)', paddingTop: '0.8rem', fontWeight: 600, fontSize: '0.88rem', color: 'var(--azul-osc)' }}>
+                                José Ángel Morales
+                            </div>
+                        </div>
+
+                        <div style={{ background: '#fff', border: '1px solid var(--linea)', padding: '2rem 1.8rem', borderRadius: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem', boxShadow: 'var(--shadow-card)' }}>
+                            <p style={{ fontStyle: 'italic', fontSize: '0.92rem', color: 'var(--tinta)', lineHeight: '1.65', margin: 0 }}>
+                                “Acudí a la clínica por recomendación de un amigo. Desde la primera visita se perciben la seriedad y la profesionalidad del equipo, pero lo mejor es su simpatía y su preocupación por el bienestar del paciente. Ahora soy yo quien los recomienda. Gracias por ayudarme a mejorar mi sonrisa.”
+                            </p>
+                            <div style={{ borderTop: '1px solid var(--linea)', paddingTop: '0.8rem', fontWeight: 600, fontSize: '0.88rem', color: 'var(--azul-osc)' }}>
+                                David Fernández Aguilera
+                            </div>
+                        </div>
+
+                        <div style={{ background: '#fff', border: '1px solid var(--linea)', padding: '2rem 1.8rem', borderRadius: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '1rem', boxShadow: 'var(--shadow-card)' }}>
+                            <p style={{ fontStyle: 'italic', fontSize: '0.92rem', color: 'var(--tinta)', lineHeight: '1.65', margin: 0 }}>
+                                “La atención recibida es inigualable. Desde la recepción hasta los doctores, todo el equipo te hace sentir fenomenal. La calidad del servicio y los resultados son de primer nivel. Tengo plena confianza en la clínica y la recomiendo al cien por cien.”
+                            </p>
+                            <div style={{ borderTop: '1px solid var(--linea)', paddingTop: '0.8rem', fontWeight: 600, fontSize: '0.88rem', color: 'var(--azul-osc)' }}>
+                                Teresa Rambaldi González
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* ===================== CANALES DE COMUNICACIÓN ===================== */}
             <section className="channels" id="canales">
                 <div className="wrap">
