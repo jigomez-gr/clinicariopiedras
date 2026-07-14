@@ -270,45 +270,47 @@ h2.title em {
     }
 
     .nav-menu {
-        position: fixed;
-        inset: auto 0 0 0;
-        top: var(--nav-h, 100px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: var(--crema);
         flex-direction: column;
         align-items: stretch;
-        padding: 1.4rem clamp(1.25rem, 5vw, 3rem) 2rem;
+        padding: 1.2rem clamp(1.25rem, 5vw, 3rem) 1.5rem;
         gap: 0;
         font-size: .9rem;
         letter-spacing: .14em;
-        box-shadow: 0 20px 40px rgba(11, 31, 69, .15);
+        box-shadow: 0 15px 30px rgba(11, 31, 69, .12);
         max-height: 0;
         overflow: hidden;
         visibility: hidden;
         transition: max-height .3s, visibility 0s .3s;
-        border-top: 1px solid var(--linea)
+        border-top: 1px solid var(--linea);
+        z-index: 99;
     }
 
     .nav-menu.open {
-        max-height: calc(100vh - var(--nav-h, 100px));
+        max-height: 480px;
         visibility: visible;
         transition: max-height .35s, visibility 0s
     }
 
     .nav-menu a {
-        padding: 1rem 0;
-        border-bottom: 1px solid var(--linea);
+        padding: 0.75rem 0;
+        border-bottom: none;
         text-align: left;
         color: var(--tinta)
     }
 
     .nav-menu a:last-child {
         border-bottom: none;
-        margin-top: 1rem
+        margin-top: 0.8rem
     }
 
     .nav-menu a.cta {
         text-align: center;
-        padding: 1rem 1.5rem;
+        padding: 0.9rem 1.5rem;
         border-radius: 999px;
         color: #fff;
         background: var(--rojo);

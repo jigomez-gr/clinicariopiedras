@@ -285,11 +285,11 @@ export default function Home() {
                         <span></span>
                     </button>
                     <a className="nav-brand" href="#hero">
-                        <img src="images/logo-clinica.png" alt="Logotipo Clínica Dental Ríos Piedras" />
                         <div className="txt">
-                            <b>Ríos Piedras</b>
+                            <b>Clínica Río Piedras</b>
                             <small className="mobile-hide">Clínica Dental · Madrid · 1985</small>
                         </div>
+                        <img src="images/logo-clinica.png" alt="Logotipo Clínica Dental Ríos Piedras" />
                     </a>
                     <div className={`nav-menu ${navOpen ? 'open' : ''}`} id="navMenu">
                         <a href="#equipo" onClick={() => setNavOpen(false)}>Equipo</a>
