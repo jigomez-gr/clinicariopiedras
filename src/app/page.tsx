@@ -299,7 +299,21 @@ export default function Home() {
                             <a href="#canales" onClick={() => setNavOpen(false)}>Canales</a>
                             <a href="#portal" onClick={() => setNavOpen(false)}>Portal</a>
                         </div>
-                        <a href="#contacto" className="cta" onClick={() => setNavOpen(false)}>Reserva gratis</a>
+                        <a
+                            href={process.env.NEXT_PUBLIC_APPMVCCLINICA || "https://clinicadentalriopiedras.n8njigretera.cloud"}
+                            className="cta"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                                setNavOpen(false);
+                            }}
+                            onDoubleClick={(e) => {
+                                e.preventDefault();
+                                window.open(process.env.NEXT_PUBLIC_APPMVCCLINICA || "https://clinicadentalriopiedras.n8njigretera.cloud", "_blank");
+                            }}
+                        >
+                            Acceso Clientes
+                        </a>
                     </div>
                 </div>
             </nav>

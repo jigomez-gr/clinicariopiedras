@@ -250,11 +250,7 @@ export default async function SpecialtyPage({ params }: PageProps) {
                             </ul>
                         </div>
 
-                        <div style={{ marginTop: '1rem' }}>
-                            <Link href="/#contacto" className="btn-solid" style={{ WebkitAppearance: 'none', display: 'inline-block', textDecoration: 'none', color: '#fff', backgroundColor: 'var(--rojo)', border: 'none', padding: '0.85rem 2rem', borderRadius: '99px', fontWeight: '600', fontSize: '1rem', cursor: 'pointer', transition: 'backgroundColor 0.2s', textAlign: 'center' }}>
-                                Pedir cita para esta especialidad →
-                            </Link>
-                        </div>
+
                     </div>
 
                     {/* Right Column: Doctor detail card */}
