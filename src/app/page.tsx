@@ -316,9 +316,6 @@ export default function Home() {
                         </span>
                     </div>
                     <h1>Cuatro décadas cuidando la sonrisa, la estética y la salud bucodental de las familias de Madrid</h1>
-                    <p className="sub">
-                        Odontología moderna, cercana y basada en evidencia científica. En el corazón del Pasillo Verde, tecnología de última generación con el trato de barrio de toda la vida.
-                    </p>
                     <div className="hero-actions">
                         <a className="btn-solid" href="#contacto">Reserva tu primera visita gratis →</a>
                         <a className="btn-ghost" href="#especialidades">Ver especialidades</a>
