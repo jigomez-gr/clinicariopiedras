@@ -57,6 +57,26 @@ button {
     border-radius: 4px
 }
 
+
+/* Utilidades de visibilidad responsive */
+.mobile-hide {
+    display: inline !important;
+}
+
+.desktop-hide {
+    display: none !important;
+}
+
+@media(max-width:640px) {
+    .mobile-hide {
+        display: none !important;
+    }
+
+    .desktop-hide {
+        display: inline !important;
+    }
+}
+
 .wrap {
     max-width: 1240px;
     margin: 0 auto;
