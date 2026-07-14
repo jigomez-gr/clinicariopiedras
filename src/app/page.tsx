@@ -292,11 +292,13 @@ export default function Home() {
                         <img src="images/logo-clinica.png" alt="Logotipo Clínica Dental Ríos Piedras" />
                     </a>
                     <div className={`nav-menu ${navOpen ? 'open' : ''}`} id="navMenu">
-                        <a href="#equipo" onClick={() => setNavOpen(false)}>Equipo</a>
-                        <a href="#especialidades" onClick={() => setNavOpen(false)}>Especialidades</a>
-                        <a href="#tecnologia" onClick={() => setNavOpen(false)}>Tecnología</a>
-                        <a href="#canales" onClick={() => setNavOpen(false)}>Canales</a>
-                        <a href="#portal" onClick={() => setNavOpen(false)}>Portal</a>
+                        <div className="nav-links-inner">
+                            <a href="#equipo" onClick={() => setNavOpen(false)}>Equipo</a>
+                            <a href="#especialidades" onClick={() => setNavOpen(false)}>Especialidades</a>
+                            <a href="#tecnologia" onClick={() => setNavOpen(false)}>Tecnología</a>
+                            <a href="#canales" onClick={() => setNavOpen(false)}>Canales</a>
+                            <a href="#portal" onClick={() => setNavOpen(false)}>Portal</a>
+                        </div>
                         <a href="#contacto" className="cta" onClick={() => setNavOpen(false)}>Reserva gratis</a>
                     </div>
                 </div>
@@ -305,16 +307,6 @@ export default function Home() {
             {/* ===================== HERO ===================== */}
             <section className="hero" id="hero">
                 <div className="hero-inner">
-                    <div className="hero-badges" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', justifyContent: 'center', marginBottom: '0.9rem', alignItems: 'center' }}>
-                        <span className="badge">
-                            <span className="mobile-hide">Primera visita gratis con radiografía y presupuesto</span>
-                            <span className="desktop-hide">1ª visita gratis + diagnóstico</span>
-                        </span>
-                        <span className="badge gdpr" style={{ color: 'var(--azul)', backgroundColor: 'rgba(30,75,148,0.08)', borderColor: 'rgba(30,75,148,0.22)' }}>
-                            <span className="mobile-hide">Art. 9 RGPD: Salud Garantizada · IA Local</span>
-                            <span className="desktop-hide">RGPD · IA Local</span>
-                        </span>
-                    </div>
                     <h1>Cuatro décadas cuidando la sonrisa, la estética y la salud bucodental de las familias de Madrid</h1>
                     <div className="hero-actions">
                         <a className="btn-solid" href="#contacto">Reserva tu primera visita gratis →</a>
