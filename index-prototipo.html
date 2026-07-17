@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root{
   /* Paleta ajustada al logotipo real de la clínica (azul + rojo) sobre crema editorial. */
@@ -478,6 +479,97 @@ h2.title em{font-style:italic;font-weight:400;color:var(--azul)}
   .a-body{padding:1rem 1.2rem 1.2rem}
   h2.title{font-size:1.5rem}
   .foot{font-size:.75rem;padding:1.5rem 1rem}
+}
+
+/* Custom Bootstrap-like classes for the diagnostic button */
+.btn {
+  display: inline-flex;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 0.375rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-outline-primary {
+  color: var(--azul);
+  border-color: var(--azul);
+  background-color: #fff;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--azul);
+  border-color: var(--azul);
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.text-muted {
+  color: var(--tinta-suave) !important;
+}
+
+.btn-outline-primary:hover .text-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.me-1 {
+  margin-right: 0.25rem !important;
+}
+
+.simulador-btn {
+  position: fixed;
+  bottom: 1.4rem;
+  right: 5.8rem;
+  z-index: 60;
+  box-shadow: 0 8px 24px rgba(11, 31, 69, 0.15);
+  background-color: #fff;
+  height: 60px;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--azul);
+  transition: all 0.2s ease-in-out;
+}
+
+.simulador-btn:hover {
+  background-color: var(--azul);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(30, 75, 148, 0.3);
+}
+
+@media(max-width: 520px) {
+  .simulador-btn {
+    bottom: 1rem;
+    right: 4.8rem;
+    height: 52px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+  }
+  .simulador-btn small {
+    display: none !important;
+  }
+  .simulador-btn span {
+    font-size: 0.8rem;
+  }
 }
 </style>
 </head>
@@ -1002,6 +1094,11 @@ h2.title em{font-style:italic;font-weight:400;color:var(--azul)}
 </footer>
 
 <!-- ===================== BURBUJA DE ASISTENTE ===================== -->
+<a href="https://clinicadentalriopiedras.n8njigretera.cloud/Citas/PublicoSimulador?doctorCorreo=jigomez@hotmail.com"
+   class="btn btn-outline-primary d-flex flex-column align-items-start simulador-btn" target="_blank" id="simuladorBtn">
+    <span><i class="fas fa-stethoscope me-1"></i> Solicitar diagnóstico</span>
+    <small class="text-muted">Te responderá el doctor cuando le sea posible</small>
+</a>
 <button class="assistant-btn" id="assistBtn" aria-label="Abrir asistente de la clínica" aria-expanded="false">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
 </button>
@@ -1184,10 +1281,11 @@ startAuto();
 
 /* Burbuja de asistente */
 const assistBtn = document.getElementById('assistBtn');
+const simuladorBtn = document.getElementById('simuladorBtn');
 const assistPanel = document.getElementById('assistPanel');
 const assistClose = document.getElementById('assistClose');
-function openAssist(){ assistPanel.classList.add('open'); assistBtn.style.display='none'; assistBtn.setAttribute('aria-expanded','true'); }
-function closeAssist(){ assistPanel.classList.remove('open'); assistBtn.style.display='grid'; assistBtn.setAttribute('aria-expanded','false'); }
+function openAssist(){ assistPanel.classList.add('open'); assistBtn.style.display='none'; simuladorBtn.style.display='none'; assistBtn.setAttribute('aria-expanded','true'); }
+function closeAssist(){ assistPanel.classList.remove('open'); assistBtn.style.display='grid'; simuladorBtn.style.display='flex'; assistBtn.setAttribute('aria-expanded','false'); }
 assistBtn.addEventListener('click', openAssist);
 assistClose.addEventListener('click', closeAssist);
 addEventListener('keydown', e=>{ if(e.key === 'Escape' && assistPanel.classList.contains('open')) closeAssist(); });

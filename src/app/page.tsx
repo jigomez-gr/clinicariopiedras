@@ -1067,17 +1067,29 @@ export default function Home() {
 
             {/* ===================== BURBUJA DE ASISTENTE ===================== */}
             {!assistantOpen && (
-                <button
-                    className="assistant-btn"
-                    id="assistBtn"
-                    aria-label="Abrir asistente de la clínica"
-                    aria-expanded="false"
-                    onClick={() => setAssistantOpen(true)}
-                >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                    </svg>
-                </button>
+                <>
+                    <a
+                        href={`${process.env.NEXT_PUBLIC_CLINICA_URL || "https://clinicadentalriopiedras.n8njigretera.cloud/"}Citas/PublicoSimulador?doctorCorreo=jigomez@hotmail.com`}
+                        className="btn btn-outline-primary d-flex flex-column align-items-start simulador-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        id="simuladorBtn"
+                    >
+                        <span><i className="fas fa-stethoscope me-1"></i> Solicitar diagnóstico</span>
+                        <small className="text-muted">Te responderá el doctor cuando le sea posible</small>
+                    </a>
+                    <button
+                        className="assistant-btn"
+                        id="assistBtn"
+                        aria-label="Abrir asistente de la clínica"
+                        aria-expanded="false"
+                        onClick={() => setAssistantOpen(true)}
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </button>
+                </>
             )}
 
             <aside className={`assistant ${assistantOpen ? 'open' : ''}`} id="assistPanel" role="dialog" aria-labelledby="assistTitle">
