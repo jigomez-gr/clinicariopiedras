@@ -2412,12 +2412,14 @@ h2.title em {
     z-index: 60;
     box-shadow: 0 8px 24px rgba(11, 31, 69, 0.15);
     background-color: #fff;
-    height: 60px;
+    height: auto;
+    min-height: 60px;
     justify-content: center;
     border-radius: 12px;
     padding: 0.5rem 1.2rem;
     border: 1px solid var(--azul);
     transition: all 0.2s ease-in-out;
+    max-width: 280px;
 }
 
 .simulador-btn:hover {
@@ -2431,14 +2433,20 @@ h2.title em {
     .simulador-btn {
         bottom: 1rem;
         right: 4.8rem;
-        height: 52px;
-        padding: 0.3rem 0.8rem;
+        height: auto;
+        min-height: 52px;
+        padding: 0.4rem 0.8rem;
         border-radius: 10px;
+        max-width: calc(100vw - 6.5rem);
     }
     .simulador-btn small {
-        display: none !important;
+        display: block !important;
+        font-size: 0.62rem;
+        margin-top: 0.15rem;
+        line-height: 1.2;
     }
     .simulador-btn span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        line-height: 1.25;
     }
 }

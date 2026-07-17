@@ -541,12 +541,14 @@ h2.title em{font-style:italic;font-weight:400;color:var(--azul)}
   z-index: 60;
   box-shadow: 0 8px 24px rgba(11, 31, 69, 0.15);
   background-color: #fff;
-  height: 60px;
+  height: auto;
+  min-height: 60px;
   justify-content: center;
   border-radius: 12px;
   padding: 0.5rem 1.2rem;
   border: 1px solid var(--azul);
   transition: all 0.2s ease-in-out;
+  max-width: 280px;
 }
 
 .simulador-btn:hover {
@@ -560,15 +562,21 @@ h2.title em{font-style:italic;font-weight:400;color:var(--azul)}
   .simulador-btn {
     bottom: 1rem;
     right: 4.8rem;
-    height: 52px;
-    padding: 0.3rem 0.8rem;
+    height: auto;
+    min-height: 52px;
+    padding: 0.4rem 0.8rem;
     border-radius: 10px;
+    max-width: calc(100vw - 6.5rem);
   }
   .simulador-btn small {
-    display: none !important;
+    display: block !important;
+    font-size: 0.62rem;
+    margin-top: 0.15rem;
+    line-height: 1.2;
   }
   .simulador-btn span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.25;
   }
 }
 </style>
@@ -1096,8 +1104,8 @@ h2.title em{font-style:italic;font-weight:400;color:var(--azul)}
 <!-- ===================== BURBUJA DE ASISTENTE ===================== -->
 <a href="https://clinicadentalriopiedras.n8njigretera.cloud/Citas/PublicoSimulador?doctorCorreo=jigomez@hotmail.com"
    class="btn btn-outline-primary d-flex flex-column align-items-start simulador-btn" target="_blank" id="simuladorBtn">
-    <span><i class="fas fa-stethoscope me-1"></i> Solicitar diagnóstico</span>
-    <small class="text-muted">Te responderá el doctor cuando le sea posible</small>
+    <span><i class="fas fa-stethoscope me-1"></i> Solicitar diagnóstico con apoyo Inteligencia Artificial</span>
+    <small class="text-muted">Te responderá el doctor cuando sea posible</small>
 </a>
 <button class="assistant-btn" id="assistBtn" aria-label="Abrir asistente de la clínica" aria-expanded="false">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>

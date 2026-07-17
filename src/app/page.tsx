@@ -1075,8 +1075,8 @@ export default function Home() {
                         rel="noopener noreferrer"
                         id="simuladorBtn"
                     >
-                        <span><i className="fas fa-stethoscope me-1"></i> Solicitar diagnóstico</span>
-                        <small className="text-muted">Te responderá el doctor cuando le sea posible</small>
+                        <span><i className="fas fa-stethoscope me-1"></i> Solicitar diagnóstico con apoyo Inteligencia Artificial</span>
+                        <small className="text-muted">Te responderá el doctor cuando sea posible</small>
                     </a>
                     <button
                         className="assistant-btn"
